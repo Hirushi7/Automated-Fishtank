@@ -1,0 +1,147 @@
+/* Global reset and base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6; /* light gray background */
+  color: #333;
+}
+
+/* Container for page content */
+.container {
+  padding: 20px;
+}
+
+/* Card style for sensor sections */
+.card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 8px;
+  color: white;
+  display: flex;              /* horizontal layout */
+  align-items: center;        /* center icon + text vertically */
+  gap: 60px;                  /* space between icon and text */
+}
+/* Color variations */
+/* Gradient variations */
+.card.orange {
+  background: linear-gradient(135deg, #f97316, #f3a05d); /* orange gradient */
+}
+
+.card.blue {
+  background: linear-gradient(135deg, #2563eb, #6da2f6); /* blue gradient */
+}
+
+.card.green {
+  background: linear-gradient(135deg, #16a33c, #40ed80); /* green gradient */
+}
+
+.card-icon {
+  font-size: 3.5rem;   /* ✅ make emoji/icon bigger */
+  flex-shrink: 0;    /* prevent shrinking */
+}
+.card-content {
+  display: flex;
+  flex-direction: column; /* stack title and value vertically */
+  text-align: left;
+}
+.card-title {
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+.card-value {
+  margin-top: 10px;   /* small gap below title */
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+
+/* Navbar styling */
+/* Navbar container */
+.navbar {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly; /* evenly spread links */
+  flex-wrap: wrap;
+  padding: 12px;
+  border-bottom: 1px solid #ccc; /* ✅ adds a line below navbar */
+}
+
+
+/* Default link style */
+.nav-link {
+  color: #350101; /* black text */
+  text-decoration: none;
+  font-weight: 500;
+  flex: 1;                 /* each link takes equal space */
+  text-align: center;      /* center text inside each link */
+}
+
+/* Hover effect */
+.nav-link:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+/* Active link style */
+.nav-link.active {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #000000; /* highlight active link in blue */
+}
+
+.navbar a {
+  color: #1815b5 !important; /* force black text */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* Banner styling */
+.banner {
+  background-color: #2563eb; /* blue background */
+  color: white;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.banner-label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 12px;
+  background: rgba(255,255,255,0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.banner-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.banner-description {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.banner-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 24px;   /* adjust size */
+  height: 24px;  /* adjust size */
+}
+
+.dashboard {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap; /* responsive on smaller screens */
+}
