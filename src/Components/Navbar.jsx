@@ -16,9 +16,7 @@ export default function Navbar() {
       <NavLink to="/feeding" className="nav-link">
         Feeding Times
       </NavLink>
-      <NavLink to="/oxygen" className="nav-link">
-        Oxygen Level
-      </NavLink>
+      
     </nav>
   );
 }

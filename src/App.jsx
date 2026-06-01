@@ -2,11 +2,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Temperature from "./components/Temperature";
-import WaterLevel from "./pages/WaterLevel";
-import FeedingTimes from "./pages/FeedingTimes";
-import Oxygen from "./pages/Oxygen";
+import WaterLevel from "./Components/WaterLevel";
+
+import FeedingTimes from "./Components/FeedingTimes";
+
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -23,9 +25,11 @@ function App() {
             <Route path="/temperature" element={<Temperature />} />
             <Route path="/water" element={<WaterLevel />} />
             <Route path="/feeding" element={<FeedingTimes />} />
-            <Route path="/oxygen" element={<Oxygen />} />
+            
           </Routes>
         </div>
+        {/* ✅ Footer always at the bottom */}
+        <Footer />
       </div>
     </Router>
   );
