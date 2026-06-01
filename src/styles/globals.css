@@ -19,7 +19,8 @@ body {
   color: white;
   display: flex;              /* horizontal layout */
   align-items: center;        /* center icon + text vertically */
-  gap: 60px;                  /* space between icon and text */
+  gap: 60px;         
+  box-shadow: 0 6px 20px rgba(0,0,0,0.20);         /* space between icon and text */
 }
 /* Color variations */
 /* Gradient variations */
@@ -52,7 +53,7 @@ body {
 
 .card-value {
   margin-top: 10px;   /* small gap below title */
-  font-size: 1.2rem;
+  font-size: 3.2rem;
   text-align: right;
 }
 
@@ -145,3 +146,138 @@ body {
   margin: 20px;
   flex-wrap: wrap; /* responsive on smaller screens */
 }
+
+/* Temperature Section */
+.temperature-section {
+  width: 96%;
+  min-height: auto;
+  background: #fff;
+  border: 3px solid #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  display: flex;              /* ✅ two-column layout */
+  flex-direction: row;        /* left + right side */
+  justify-content: space-between;
+  align-items: flex-start;    /* align to top */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.50);
+  
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .temperature-section {
+    width: 95%;
+    min-height: 85vh;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .temperature-title {
+    font-size: 1.5rem;
+  }
+
+  .temperature-value {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .temperature-section {
+    width: 98%;
+    min-height: 80vh;
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  .temperature-title {
+    font-size: 1.2rem;
+  }
+
+  .temperature-value {
+    font-size: 2rem;
+  }
+}
+/* Left column (text) */
+.temperature-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;    /* ✅ left align */
+  gap: 10px;
+}
+
+.temperature-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: -35px;
+}
+
+.temperature-value {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #111;
+}
+
+
+
+.temperature-indicator {
+  position: absolute;
+  top: 0;
+  height: 20px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.4);
+}
+
+/* Safe range strip */
+.temperature-range {
+  background: #d1fae5;
+  color: #065f46;
+  font-weight: 600;
+  padding: 10px 460px;
+  border-radius: 6px;
+ flex: 10;
+  
+}
+
+/* Status message */
+.temperature-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 460px;
+  border-radius: 6px;
+  width: 510px;
+}
+
+.temperature-status.safe {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.temperature-status.unsafe {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.temperature-icon {
+  font-size: 1.5rem;
+}
+.temperature-right {
+  flex:auto;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding-top: 40px;   /* ✅ pushes bar down */
+}
+
+.temperature-bar {
+  width: 100%;   /* adjust bar width */
+  height: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #f97316, #16a34a, #065f46);
+  position: relative;
+}
+
