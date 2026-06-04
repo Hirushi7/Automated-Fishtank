@@ -14,8 +14,7 @@ export default function Banner() {
         A system for remotely monitoring and controlling fish tank conditions to ensure a healthy aquatic environment.
       </p>
 
-      {/* Bell icon top-right */}
-      <img src={bellIcon} alt="Notification Icon" className="banner-icon" />
+      
     </div>
   );
 }

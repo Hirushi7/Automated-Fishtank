@@ -7,15 +7,7 @@ export default function Navbar() {
       <NavLink to="/" end className="nav-link">
         Dashboard Summary
       </NavLink>
-      <NavLink to="/temperature" className="nav-link">
-        Temperature
-      </NavLink>
-      <NavLink to="/water" className="nav-link">
-        Water Level
-      </NavLink>
-      <NavLink to="/feeding" className="nav-link">
-        Feeding Times
-      </NavLink>
+     
       
     </nav>
   );
